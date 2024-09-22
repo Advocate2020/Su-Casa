@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('avatar')->default('/uploads/blank-profile-picture.png');
             $table->string('name');
+            $table->string('surname');
             $table->string('email')->unique();
             $table->enum('role', ['user', 'admin'])->defualt('user');
             $table->timestamp('email_verified_at')->nullable();
